@@ -92,7 +92,7 @@ For the 5 non-magic numbers use your choice of any of the following methods to g
 - Convert the last letter of their favorate actor/actress to an integer and use that value.
 - Use the value 42.
 - Use the age of their favorite pet + their car model year.\*\*\*\*
-- Favorite quarterback number + age of pet + lucky number.
+- Favorite quarterback number + age of pet + lucky number.\*\*\*
 
 Once all the numbers have been calculated, print them out in this form:
 

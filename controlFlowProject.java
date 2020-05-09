@@ -24,30 +24,60 @@ public class controlFlowProject {
 
             System.out.println("What is the age of your favorite pet?");
             int petAge = userInput.nextInt();
+            while (petAge > 100) {
+                System.out.println(
+                        "You don't have a pet who is older than 100 years old. If you do, contact the Guinness Book of World Records and get recognized. But for our sake, please enter a new age for your pet.");
+                petAge = userInput.nextInt();
+            }
 
             System.out.println("What is your lucky number?");
             int luckyNum = userInput.nextInt();
 
             System.out.println("What is the number of your favorite football Quarterback?");
             int favQBNum = userInput.nextInt();
+            while (favQBNum >= 100) {
+                System.out.println(
+                        "There isn't a quarterback who has a number greater than 100. Please enter a number below 100");
+                favQBNum = userInput.nextInt();
+            }
 
             System.out.println("What is two-digit model year of their car?");
             int modelYear = userInput.nextInt();
+            while (modelYear > 99) {
+                System.out.println("Please enter a TWO-digit model year of your car");
+                modelYear = userInput.nextInt();
+            }
 
             System.out.println("What is the first name of your favorite actor or actress?");
             String actor = userInput.next();
 
             System.out.println("Enter a random number between 1 and 50: ");
             int randNumb = userInput.nextInt();
-
-            System.out.println("Enter another random number between 1 and 50: ");
-            int randomNumb1 = userInput.nextInt();
+            while (randNumb >= 50) {
+                System.out.println("Enter a random number between 1 and 50");
+                randNumb = userInput.nextInt();
+            }
 
             System.out.println("Enter a second random number between 1 and 50: ");
+            int randomNumb1 = userInput.nextInt();
+            while (randNumb >= 50) {
+                System.out.println("Enter a random number between 1 and 50");
+                randNumb = userInput.nextInt();
+            }
+
+            System.out.println("Enter a third random number between 1 and 50: ");
             int randomNumb2 = userInput.nextInt();
+            while (randNumb >= 50) {
+                System.out.println("Enter a random number between 1 and 50");
+                randNumb = userInput.nextInt();
+            }
 
             System.out.println("Give me one more random number between 1 and 50: ");
             int randomNumb3 = userInput.nextInt();
+            while (randNumb >= 50) {
+                System.out.println("Enter a random number between 1 and 50");
+                randNumb = userInput.nextInt();
+            }
 
             Random rand = new Random();
             int rand1 = rand.nextInt(3);
@@ -109,6 +139,11 @@ public class controlFlowProject {
             System.out.println(
                     "Would you like to answer the questions again to generate a new set of Lottery numbers? Answer y or yes");
             interactivePortion = userInput.next().charAt(0);
+
+            if (interactivePortion != 'y') {
+                System.out.println("Thank you for playing!");
+                System.exit(0);
+            }
 
         }
 
